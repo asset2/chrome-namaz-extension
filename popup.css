@@ -1,0 +1,166 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  --bg: #0b1020;
+  --bg-2: #131b34;
+  --card: #161f3a;
+  --text: #e9eefc;
+  --muted: #a3afd1;
+  --accent: #4cc9b0;
+  --accent-soft: #163e38;
+  --border: #253255;
+  --danger: #ff7b7b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top right, #1b2e57, var(--bg) 56%);
+  min-width: 340px;
+  color: var(--text);
+}
+
+.card {
+  padding: 16px;
+}
+
+.top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.city-control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.city-control select {
+  min-width: 118px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  color: var(--text);
+}
+
+.source {
+  margin: 4px 0 16px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.source a {
+  color: #8cc7ff;
+}
+
+.content {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  min-height: 178px;
+}
+
+#status {
+  margin: 0;
+  color: var(--muted);
+}
+
+.hidden {
+  display: none;
+}
+
+.label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.value {
+  margin: 6px 0 2px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.time {
+  margin: 0;
+  color: var(--accent);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.countdown {
+  margin: 8px 0 0;
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: #8ff5e4;
+  font-size: 13px;
+}
+
+details {
+  margin-top: 12px;
+  border-top: 1px dashed var(--border);
+  padding-top: 10px;
+}
+
+summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+#todayList {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+#todayList li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 0;
+  border-bottom: 1px solid #243255;
+  font-size: 13px;
+}
+
+#todayList li:last-child {
+  border-bottom: none;
+}
+
+button {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+.error #status {
+  color: var(--danger);
+}

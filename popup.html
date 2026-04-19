@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Следующий намаз</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="card">
+    <div class="top-row">
+      <h1 id="cityTitle">Алматы</h1>
+      <label class="city-control" for="citySelect">
+        <span>Город</span>
+        <select id="citySelect">
+          <option value="almaty">Алматы</option>
+          <option value="astana">Астана</option>
+          <option value="shymkent">Шымкент</option>
+        </select>
+      </label>
+    </div>
+    <p class="source">Источник: <a id="sourceLink" target="_blank" rel="noreferrer noopener" href="https://sajda.com/ru/prayer-times/kazakhstan/almaty/1526384">sajda.com</a></p>
+
+    <section id="content" class="content loading">
+      <p id="status">Загружаю расписание...</p>
+
+      <div id="nextPrayerBlock" class="hidden">
+        <p class="label">Следующий намаз</p>
+        <p id="nextPrayerName" class="value">-</p>
+        <p id="nextPrayerTime" class="time">--:--</p>
+        <p id="countdown" class="countdown">До намаза: --</p>
+      </div>
+
+      <details id="todayDetails" class="hidden">
+        <summary>Все времена на сегодня</summary>
+        <ul id="todayList"></ul>
+      </details>
+    </section>
+
+    <button id="refreshBtn" type="button">Обновить</button>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>

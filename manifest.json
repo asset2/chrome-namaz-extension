@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Следующий намаз (Алматы)",
+  "description": "Показывает время следующего намаза для Алматы на основе данных sajda.com.",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Следующий намаз",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://sajda.com/*"
+  ]
+}
